@@ -1,65 +1,111 @@
-import Image from "next/image";
+"use client";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-black text-white">
+      {/* ================= HERO SECTION ================= */}
+      <section className="w-full py-32 text-center flex flex-col items-center justify-center">
+        <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight">
+          <span className="text-red-500">Codelite Labs</span> — AI-Powered Business Automation
+        </h1>
+
+        <p className="mt-6 text-lg text-gray-300 max-w-2xl">
+          Smart Marketing. Smart Sales. Smart Operations.  
+          One platform that automates everything your business needs.
+        </p>
+
+        <div className="mt-10 flex gap-4">
+          <button className="px-8 py-3 bg-red-600 hover:bg-red-700 transition rounded-lg font-semibold">
+            Get Started
+          </button>
+
+          <button className="px-8 py-3 border border-gray-600 hover:bg-gray-800 transition rounded-lg font-semibold">
+            Watch Demo
+          </button>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* ================= FEATURES SECTION ================= */}
+      <section className="w-full py-24 bg-[#0b0b0b]">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16">
+            Why <span className="text-red-500">Codelite Labs</span>?
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            {/* Card 1 */}
+            <div className="p-8 bg-gray-900 border border-gray-700 rounded-xl hover:border-red-500 transition">
+              <h3 className="text-xl font-bold mb-3 text-red-400">AI Marketing Engine</h3>
+              <p className="text-gray-400">
+                Auto-create posts, reels, captions, content calendars, ads & strategies for any business.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="p-8 bg-gray-900 border border-gray-700 rounded-xl hover:border-red-500 transition">
+              <h3 className="text-xl font-bold mb-3 text-red-400">AI Lead Management</h3>
+              <p className="text-gray-400">
+                Capture leads, score leads, auto-follow-up, auto-assign & convert faster.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="p-8 bg-gray-900 border border-gray-700 rounded-xl hover:border-red-500 transition">
+              <h3 className="text-xl font-bold mb-3 text-red-400">AI Sales Automation</h3>
+              <p className="text-gray-400">
+                Quotes, invoices, proposals & reminders — fully automated.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="p-8 bg-gray-900 border border-gray-700 rounded-xl hover:border-red-500 transition">
+              <h3 className="text-xl font-bold mb-3 text-red-400">AI Web Builder</h3>
+              <p className="text-gray-400">
+                Generate high-converting websites instantly. SEO-ready, responsive, multilingual.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="p-8 bg-gray-900 border border-gray-700 rounded-xl hover:border-red-500 transition">
+              <h3 className="text-xl font-bold mb-3 text-red-400">AI Creative Studio</h3>
+              <p className="text-gray-400">
+                Posters, festival posts, ads, WhatsApp creatives — made in 10 seconds.
+              </p>
+            </div>
+
+            {/* Card 6 */}
+            <div className="p-8 bg-gray-900 border border-gray-700 rounded-xl hover:border-red-500 transition">
+              <h3 className="text-xl font-bold mb-3 text-red-400">Global Business OS</h3>
+              <p className="text-gray-400">
+                Business intelligence, insights & AI assistants tailored for your industry.
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* ================= CTA SECTION ================= */}
+      <section className="w-full py-28 bg-black text-center">
+        <h2 className="text-4xl font-bold mb-6">
+          Ready to Automate Your Business?
+        </h2>
+        <p className="text-gray-400 max-w-2xl mx-auto">
+          Start today and see the difference in your leads, marketing & operations within 48 hours.
+        </p>
+
+        <div className="mt-10">
+          <button className="px-10 py-4 bg-red-600 hover:bg-red-700 rounded-lg text-lg font-semibold">
+            Start Free Trial
+          </button>
+        </div>
+      </section>
+
+      {/* ================= FOOTER ================= */}
+      <footer className="w-full py-10 border-t border-gray-800 bg-[#0b0b0b] text-center">
+        <p className="text-gray-500 text-sm">
+          © {new Date().getFullYear()} Codelite Labs. All rights reserved.
+        </p>
+      </footer>
+    </main>
   );
 }
