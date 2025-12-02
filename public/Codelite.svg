@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="252" height="144" viewBox="0 0 252 144">
+<defs>
+<clipPath id="clip_0">
+<path transform="matrix(1,0,0,-1,0,144)" d="M0 0H252V144H0Z"/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip_0)">
+<text fill="#565656" xml:space="preserve" transform="matrix(1 0 -0 1 0 144)" font-size="19.434" font-family="Montserrat" font-weight="bold"><tspan y="-64.9292" x="62.3511 76.30471 92.70701 108.75949 121.799709 133.53784 139.9122 151.92241 164.96262 170.46244 182.31717 197.20362 212.07062">CODELITE LABS</tspan></text>
+<text xml:space="preserve" transform="matrix(1 0 -0 1 0 144)" font-size="6.5579" font-family="MontserratAlternates"><tspan y="-53.3652" x="126.1851 130.78153 134.94579 139.41828 143.4317 145.19577 150.1601 152.80228 154.63193 159.15688 163.6228 166.09449 170.10791 172.73107 174.21971 175.98378 180.9481 185.3878 187.21746 189.25762 193.7301 195.49417 199.56662 206.51865 210.99114 213.63463 216.10631 220.11974 222.74289">Code Brighter, Build Smarter.</tspan></text>
+<path transform="matrix(1,0,0,-1,0,144)" d="M60.0534 85.8901 36.8224 45.1261H60.7104V40.3041H28.7134L54.7934 85.8901Z" fill="#616363"/>
+<path transform="matrix(1,0,0,-1,0,144)" d="M60.7108 92.6841V87.8621H43.0678C40.9228 87.8621 37.0908 86.3111 35.2208 85.1901 23.4118 78.1081 23.8558 60.7331 35.7108 53.9811L33.4038 49.9641C19.2858 57.5811 17.7338 77.6721 30.3628 87.6371 39.4628 94.8181 49.9248 92.2341 60.7108 92.6841" fill="#ed0000"/>
+<path transform="matrix(1,0,0,-1,0,144)" d="M60.7108 51.7009V46.8789C54.9398 47.1749 48.7868 46.4869 43.0598 46.8699 42.5338 46.9059 39.2728 47.3569 39.2198 47.6669 39.7308 49.1579 40.7408 50.5779 41.5798 51.9269Z" fill="#ed0000"/>
+</g>
+</svg>
