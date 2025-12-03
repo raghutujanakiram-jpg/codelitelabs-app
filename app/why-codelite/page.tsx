@@ -1,4 +1,5 @@
 // app/why-codelite/page.tsx
+import type { Metadata } from "next";
 
 export const metadata = {
   title: "Why Codelite – AI Automation That Actually Ships",

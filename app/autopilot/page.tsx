@@ -1,10 +1,11 @@
 // app/autopilot/page.tsx
+import type { Metadata } from "next";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Codelite AutoPilot – AI Marketing & Sales Automation",
+export const metadata: Metadata = {
+  title: "Codelite AutoPilot – AI Marketing & Sales Automation OS",
   description:
-    "Put your marketing and sales on AutoPilot. One AI platform to create content, capture leads, follow up, send proposals and track payments automatically.",
+    "Put your marketing and sales on AutoPilot. Capture leads, follow up on WhatsApp and email, send proposals, track invoices and recover cold leads automatically.",
 };
 
 export default function AutoPilotPage() {

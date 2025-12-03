@@ -1,4 +1,5 @@
 // app/about/page.tsx
+import type { Metadata } from "next";
 
 export const metadata = {
   title: "About – Codelite Labs",

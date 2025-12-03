@@ -1,41 +1,47 @@
-// app/layout.tsx
-
-import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "../components/Navbar";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Codelite Labs — AI Business Automation",
-    template: "%s | Codelite Labs",
-  },
+  title: "Codelite Labs — AI Automation for Real Businesses",
   description:
-    "Codelite Labs delivers AI-driven marketing, website automation, and intelligent billing through AutoPilot, WebCraft, and BillMaster.",
+    "Codelite Labs builds AI-first tools like AutoPilot, WebCraft and BillMaster to automate marketing, sales, websites and billing for global businesses.",
   keywords: [
-    "Codelite Labs",
-    "AutoPilot",
-    "WebCraft",
-    "BillMaster",
-    "AI business automation",
-    "AI CRM",
-    "AI marketing automation",
+    "AI automation",
+    "business automation",
+    "marketing automation",
+    "sales CRM",
     "AI website builder",
-    "AI invoicing",
+    "invoice generator",
+    "UAE automation",
+    "Germany automation",
   ],
   icons: {
-    icon: "/Codelite.svg",
+    icon: "/favicon.ico",
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="bg-[#05060A] text-white antialiased">
-        {/* Global Navigation */}
+      <body className={`${inter.className} bg-black text-white antialiased`}>
+        {/* Global navigation */}
         <Navbar />
 
-        {/* Page Content */}
-        <div className="pt-0">{children}</div>
+        {/* Main content wrapper */}
+        <main className="min-h-[70vh]">{children}</main>
+
+        {/* Global footer */}
+        <Footer />
       </body>
     </html>
   );

@@ -1,4 +1,5 @@
 // app/pricing/page.tsx
+import type { Metadata } from "next";
 
 export const metadata = {
   title: "Pricing – Codelite Labs",

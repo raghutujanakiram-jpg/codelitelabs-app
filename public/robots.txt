@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Block common non-SEO paths (if you add them later)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /dashboard/
+
+Sitemap: https://codelitelabs.app/sitemap.xml
+Host: https://codelitelabs.app
