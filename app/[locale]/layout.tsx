@@ -2,7 +2,6 @@ import React from "react";
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { locales, isRTL } from "@/lib/i18n.config";
 
@@ -46,8 +45,9 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export default function LocaleLayout(props: Props) {
-  const locale = React.use(props.params).locale;
+export default async function LocaleLayout(props: Props) {
+  const params = await props.params;
+  const locale = params.locale;
 
   if (!locales.includes(locale as any)) {
     notFound();
