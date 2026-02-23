@@ -1,8 +1,14 @@
 // components/Footer.tsx
 
+"use client";
+
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
+  const year = new Date().getFullYear();
+
   return (
     <footer className="border-t border-white/10 bg-black/95 text-xs text-gray-300">
       <div className="mx-auto max-w-6xl px-4 py-8 md:px-6 md:py-10">
@@ -11,24 +17,20 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-3">
             <p className="text-sm font-semibold tracking-[0.18em] text-white uppercase">
-              Codelite Labs
+              {t("brand")}
             </p>
             <p className="text-gray-400 text-[0.78rem] leading-relaxed">
-              AI-first automation studio behind{" "}
-              <span className="text-white font-medium">AutoPilot</span>,{" "}
-              <span className="text-white font-medium">WebCraft</span> and{" "}
-              <span className="text-white font-medium">BillMaster</span>.
-              Built for real businesses, not just dashboards.
+              {t("tagline")}
             </p>
             <p className="text-[0.75rem] text-gray-500">
-              Operated by <span className="text-gray-300 font-medium">UNA Creative Hub</span>.
+              {t("operatedBy")}
             </p>
           </div>
 
           {/* Products */}
           <div>
             <h3 className="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-gray-400">
-              Products
+              {t("products")}
             </h3>
             <ul className="mt-3 space-y-1.5">
               <li>
@@ -36,7 +38,7 @@ export default function Footer() {
                   href="/autopilot"
                   className="hover:text-red-400 transition"
                 >
-                  AutoPilot – Marketing & Sales OS
+                  {t("autopilotLabel")}
                 </Link>
               </li>
               <li>
@@ -44,7 +46,7 @@ export default function Footer() {
                   href="/webcraft"
                   className="hover:text-red-400 transition"
                 >
-                  WebCraft – AI Website Builder
+                  {t("webcraftLabel")}
                 </Link>
               </li>
               <li>
@@ -52,7 +54,7 @@ export default function Footer() {
                   href="/billmaster"
                   className="hover:text-red-400 transition"
                 >
-                  BillMaster – Invoices & Quotes
+                  {t("billmasterLabel")}
                 </Link>
               </li>
             </ul>
@@ -61,12 +63,12 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h3 className="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-gray-400">
-              Company
+              {t("company")}
             </h3>
             <ul className="mt-3 space-y-1.5">
               <li>
                 <Link href="/about" className="hover:text-red-400 transition">
-                  About Codelite Labs
+                  {t("aboutCodelite")}
                 </Link>
               </li>
               <li>
@@ -74,7 +76,7 @@ export default function Footer() {
                   href="/why-codelite"
                   className="hover:text-red-400 transition"
                 >
-                  Why Codelite?
+                  {t("whyCodelite")}
                 </Link>
               </li>
               <li>
@@ -82,7 +84,7 @@ export default function Footer() {
                   href="/contact"
                   className="hover:text-red-400 transition"
                 >
-                  Contact & Demo
+                  {t("contactDemo")}
                 </Link>
               </li>
             </ul>
@@ -91,7 +93,7 @@ export default function Footer() {
           {/* Legal / meta */}
           <div>
             <h3 className="text-[0.8rem] font-semibold uppercase tracking-[0.18em] text-gray-400">
-              Legal &amp; Info
+              {t("legalInfo")}
             </h3>
             <ul className="mt-3 space-y-1.5">
               <li>
@@ -99,12 +101,12 @@ export default function Footer() {
                   href="/privacy"
                   className="hover:text-red-400 transition"
                 >
-                  Privacy Policy
+                  {t("privacy")}
                 </Link>
               </li>
               <li>
                 <Link href="/terms" className="hover:text-red-400 transition">
-                  Terms of Use
+                  {t("terms")}
                 </Link>
               </li>
               <li>
@@ -112,7 +114,7 @@ export default function Footer() {
                   href="/refunds"
                   className="hover:text-red-400 transition"
                 >
-                  Refund & Cancellation
+                  {t("refunds")}
                 </Link>
               </li>
             </ul>
@@ -121,14 +123,9 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-8 flex flex-col gap-3 border-t border-white/5 pt-4 text-[0.75rem] text-gray-500 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} Codelite Labs · A product line by{" "}
-            <span className="text-gray-300 font-medium">UNA Creative Hub</span>.
-            All rights reserved.
-          </p>
+          <p>{t("copyright", { year })}</p>
           <p className="text-gray-500">
-            Made with <span className="text-red-400">●</span> in India, serving
-            UAE, Germany &amp; beyond.
+            {t("madeWith")}
           </p>
         </div>
       </div>
