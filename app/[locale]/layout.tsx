@@ -3,6 +3,8 @@ import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 import { locales, isRTL } from "@/lib/i18n.config";
 
 import Navbar from "@/components/Navbar";
@@ -53,6 +55,7 @@ export default async function LocaleLayout(props: Props) {
     notFound();
   }
 
+  const messages = await getMessages();
   const direction = isRTL[locale as any] ? "rtl" : "ltr";
 
   return (
@@ -61,14 +64,11 @@ export default async function LocaleLayout(props: Props) {
         className={`${inter.className} bg-black text-white antialiased`}
         suppressHydrationWarning
       >
-        {/* Global navigation */}
-        <Navbar />
-
-        {/* Main content wrapper */}
-        <main className="min-h-[70vh]">{props.children}</main>
-
-        {/* Global footer */}
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          <main className="min-h-[70vh]">{props.children}</main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
